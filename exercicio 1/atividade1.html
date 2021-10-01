@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <style>
+       *{
+           padding: 0px;
+           margin: 0px;
+           box-sizing: border-box;
+       }
+       .boxBoy{
+           top: 50%;
+           left: 50%;
+           margin-top: -100%;
+           margin-left: -75px;
+           border: 1px solid black;
+           margin: auto;
+           position: absolute;
+           height: 172px;
+           width: 150px;
+       }
+       .boxBoy p{
+           text-align: center;
+       }
+   </style>
+    <script>       
+        function changeBoy(nameImg,msg){
+            document.getElementById("imgBoy").src = `img/${nameImg}.png`
+            if(nameImg == "alegre"){
+                nome = prompt("Qual é o seu nome?!");
+                msg = `${nome}, voce quer brincar comigo?!`;
+            }
+            document.getElementById("txtBoy").innerHTML = msg;
+        }
+    </script>
+</head>
+<body>
+    <div class="boxBoy">
+        <img src="img/Pensativo.png" id="imgBoy" alt="Desenho com rosto pensativo" 
+        height="169" 
+        width="145"
+        onmouseenter="changeBoy('Assustado','O que voce quer!?')"
+        onmousedown="changeBoy('Nervoso','Nao me aperte!')"
+        onmouseup="changeBoy('alegre','')"
+        onmouseout="changeBoy('Pensativo', 'ZZZZZZZZZZZZZ!')"
+        >
+        <p id="txtBoy">ZZZZZZZZ!</p>
+    </div>   
+</body>
+</html>

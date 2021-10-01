@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            background-color: #696969;
+        }
+
+        div.cand {
+            display: flex;
+            justify-content: center;
+        }
+
+        h3 {
+            text-align: center;
+            color: red;
+            background-color: #8FBC8F;
+        }
+
+        p {
+            text-align: center;
+            background-color: #8FBC8F;
+        }
+
+        h4 {
+            text-align: center;
+            background-color: #8FBC8F;
+        }
+
+        .opcao {
+            padding: 20px;
+            background-color: #8FBC8F;
+            border-width: medium;
+            border-style: solid;
+            border-color: black;
+            margin: 20px;
+        }
+
+        .opcao:hover {
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+       
+        function soma(id){
+            voto = parseInt(document.getElementById(id).innerHTML);
+                document.getElementById(id).innerHTML = voto + 1;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="cand">
+        <div class="opcao">
+            <h3>CANDIDATO 1</h3>
+            <p>Mickey</p>
+          <img src="img/candidato1.jpg" id='1'  onclick="soma('cand1')">
+            <h4>Número de votos: </h4><p id="cand1">0</p>
+        </div>
+
+        <div class="opcao">
+            <h3>CANDIDATO 2</h3>
+            <p>Minnie</p>
+            <img src="img/candidato2.jpg" id='2' onclick="soma('cand2')">
+            <h4>Número de votos: </h4><p id="cand2">0</p>
+        </div>
+        <div class="opcao">
+            <h3>CANDIDATO 3</h3>
+            <p>Pluto</p>
+            <img src="img/candidato3.jpg" id='3' onclick="soma('cand3')">
+            <h4>Número de votos: </h4><p id="cand3">0</p>
+        </div>
+        <div class="opcao">
+            <h3>CANDIDATO 4</h3>
+            <p>Pateta</p>
+            <img src="img/candidato4.jpg" id='4' onclick="soma('cand4')">
+            <h4>Número de votos: </h4><p id="cand4">0</p>
+        </div>
+    </div>
+</body>
+</html>
